@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Article } from './Article';
 import { DataService } from './data.service';
 
@@ -12,14 +13,11 @@ export class AppComponent implements OnInit {
   search = {
     title: 'demo1'
   };
-  data: Article[] = [];
+  data$!: Observable<Article[]>;
   constructor(private dataSrv: DataService) { }
 
   ngOnInit(): void {
-    this.dataSrv.loadArticle().subscribe(result => {
-      this.data = result;
-    });
-
+    this.data$ = this.dataSrv.loadArticle();
   }
 
   doSearch(str: string) {
