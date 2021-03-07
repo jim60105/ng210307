@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  sitename = 'The Will Will Web';
 
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.sitename = 'New SiteName';
+    }, 2000);
   }
 
 }
