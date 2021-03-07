@@ -9,4 +9,8 @@ export class AppComponent {
   data = {
     title: 'demo1'
   };
+
+  doSearch(str: string) {
+    this.data.title = str;
+  }
 }
