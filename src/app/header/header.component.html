@@ -32,7 +32,7 @@
                 <h3 [style.font-size.px]="counter" [class.highlight]="counter%2">記載著 Will 在網路世界的學習心得與技術分享</h3>
             </div>
 
-            <div id="social-icons" class="pull-right social-icon">
+            <div id="social-icons" class="pull-right social-icon" *ngIf="counter%2">
                 <a href="https://www.facebook.com/will.fans" title="Will 保哥的技術交流中心" target="_blank">
                     <img src="/assets/images/facebook.png">
                 </a>
