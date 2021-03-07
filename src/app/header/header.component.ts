@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   sitename = 'The Will Will Web';
+  sitelogo = '/assets/images/logo.png';
 
   constructor() { }
 
