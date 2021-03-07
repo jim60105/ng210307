@@ -8,20 +8,22 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   sitename = 'The Will Will Web';
   sitelogo = '/assets/images/logo.png';
+  counter = 10;
 
   constructor() { }
 
   changeName($event: MouseEvent) {
     console.log($event);
+    this.counter++;
     if ($event.ctrlKey) {
       this.sitename = 'Click SiteName';
     }
   }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.sitename = 'New SiteName';
-    }, 2000);
+    // setTimeout(() => {
+    //   this.sitename = 'New SiteName';
+    // }, 2000);
   }
 
 }
