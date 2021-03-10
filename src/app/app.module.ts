@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,

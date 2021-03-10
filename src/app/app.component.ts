@@ -23,6 +23,10 @@ export class AppComponent implements OnInit {
   doSearch(str: string) {
     this.search.title = str;
   }
+
+  doDelete(id: number) {
+    console.log(`刪除id為${id}的文章`);
+  }
 }
 
 
